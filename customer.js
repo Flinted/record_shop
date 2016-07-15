@@ -13,11 +13,15 @@ Customer.prototype = {
     return item.price;
   },
   getMoney: function(amount){
-
+    this.money += 100.00
   },
-  sellItem: function(item){
-
-  }
+  sellItem: function(item, store, type){
+    this.balance += store.buyBack(item,type);
+    _.remove(this[type], function(stock){
+      return stock.name === item.name
+    })
+  },
+}
 }
 
 

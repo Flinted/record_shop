@@ -68,7 +68,6 @@ describe("Store", function(){
 
     it("should give financials", function(){
       store.addStock(stock);
-      console.log(store.financials())
-      assert.equal(75.00, store.financials.stock)
+      assert.equal(75.00, store.financials().stock)
     })
   })
