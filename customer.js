@@ -7,14 +7,16 @@ var Customer = function(params){
 }
 
 Customer.prototype = {
-  buyItem: function(item){
-
+  buyItem: function(item,type){
+    this[type].push(item);
+    this.money -= item.price;
+    return item.price;
   },
   getMoney: function(amount){
 
   },
   sellItem: function(item){
-    
+
   }
 }
 
