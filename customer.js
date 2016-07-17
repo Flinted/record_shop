@@ -21,8 +21,12 @@ Customer.prototype = {
       return stock.name === item.name
     })
   },
+
+  review: function(item, rating){
+    item.review(rating);
+  }
 }
-}
+
 
 
 module.exports = Customer;

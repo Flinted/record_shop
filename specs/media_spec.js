@@ -19,6 +19,14 @@ describe("CD", function(){
       assert.deepEqual(9.00, cd1.price)
     })
 
+    it("should be reviewable", function(){
+      cd1.review(4);
+      cd1.review(3);
+      cd1.review(5);
+      assert.deepEqual(4, cd1.rating);
+      assert.deepEqual(3, cd1.reviews);
+    })
+
 })
 
 
@@ -60,6 +68,14 @@ describe("Record", function(){
     it("should appreciate", function(){
       record1.appreciate()
       assert.deepEqual(11.00, record1.price)
+    })
+
+    it("should be reviewable", function(){
+      record1.review(4);
+      record1.review(3);
+      record1.review(5);
+      assert.deepEqual(4, record1.rating);
+      assert.deepEqual(3, record1.reviews);
     })
 
 })
